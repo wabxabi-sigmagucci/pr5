@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOIR COFFEE — specialty coffee, fresh pastries and slow moments.">
+  <meta name="theme-color" content="#151311">
+  <title>NOIR COFFEE — Coffee is more than a drink</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="NOIR COFFEE home">
+      <span class="brand-mark">N</span>
+      <span class="brand-name">NOIR <span>COFFEE</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link is-active">Home</a>
+      <a href="#menu" class="nav-link">Menu</a>
+      <a href="#about" class="nav-link">About</a>
+    </nav>
+
+    <div class="header-side">
+      <div class="stopwatch" aria-label="Time since this page was opened">
+        <span class="stopwatch-dot"></span>
+        <span id="stopwatch-time">00:00</span>
+      </div>
+      <a class="header-visit" href="#about">Visit us <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="app-main">
+    <section id="home" class="page-section home-section" aria-labelledby="home-title">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> SPECIALTY COFFEE · EST. 2021</p>
+          <h1 id="home-title">Coffee is<br>more than <em>a drink.</em></h1>
+          <p class="hero-description">A little pause in the middle of everything. Thoughtfully sourced coffee, familiar flavours and moments worth slowing down for.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#menu">Explore menu <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#about">Our story <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-note">
+            <span class="note-line"></span>
+            <span>GOOD COFFEE. SLOW MOMENTS.</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=85" alt="Freshly brewed coffee on a wooden table">
+          <div class="image-caption"><span>01 / 03</span><span>THE ART OF SLOWING DOWN</span></div>
+          <div class="hero-stamp"><span>BREWED</span><strong>WITH<br>INTENTION</strong><span>— NOIR —</span></div>
+        </div>
+        <div class="hero-scroll"><span></span> SCROLL TO DISCOVER</div>
+      </div>
+
+      <div class="intro-strip">
+        <p>NOT JUST A COFFEE SHOP.</p>
+        <p class="intro-script">Your everyday hideaway.</p>
+        <p>MADE FOR THE MOMENTS IN BETWEEN.</p>
+      </div>
+
+      <div class="home-feature">
+        <div class="feature-image">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1100&q=85" alt="Barista preparing a cup of coffee">
+        </div>
+        <div class="feature-copy">
+          <p class="eyebrow">A PLACE TO PAUSE</p>
+          <h2>Find your<br><em>own rhythm.</em></h2>
+          <p>Whether it's your first coffee of the day or a late afternoon reset, there's always a place for you at our table.</p>
+          <a class="text-link" href="#about">Get to know us <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <div class="benefits">
+        <article><span class="benefit-number">01</span><h3>Carefully sourced</h3><p>Quality beans selected for their character, origin and flavour.</p></article>
+        <article><span class="benefit-number">02</span><h3>Made with care</h3><p>Every cup prepared with attention to the little details.</p></article>
+        <article><span class="benefit-number">03</span><h3>Always welcoming</h3><p>A warm space for good conversations and quiet moments.</p></article>
+      </div>
+    </section>
+
+    <section id="menu" class="page-section menu-section is-hidden" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <p class="eyebrow"><span></span> SOMETHING GOOD IS BREWING</p>
+        <h1 id="menu-title">Our <em>menu.</em></h1>
+        <p>Simple favourites, made thoughtfully. Find your usual or discover something new.</p>
+      </div>
+
+      <div class="menu-toolbar" aria-label="Menu categories">
+        <button class="category-button is-selected" type="button" data-category="all" aria-pressed="true">All items <span>12</span></button>
+        <button class="category-button" type="button" data-category="coffee" aria-pressed="false">Coffee <span>6</span></button>
+        <button class="category-button" type="button" data-category="desserts" aria-pressed="false">Desserts & Bakery <span>4</span></button>
+        <button class="category-button" type="button" data-category="drinks" aria-pressed="false">Other drinks <span>2</span></button>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <article class="product-card" data-category="coffee">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1572286258217-40142c1c6a70?auto=format&fit=crop&w=900&q=85" alt="Espresso in a white ceramic cup on a dark saucer" loading="lazy"><span class="product-tag">CLASSIC</span></div>
+          <div class="product-info"><div><h3>Espresso</h3><p>Rich, balanced and beautifully simple.</p></div><strong>$2.00</strong></div>
+        </article>
+        <article class="product-card" data-category="coffee">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1551030173-122aabc4489c?auto=format&fit=crop&w=900&q=85" alt="Americano black coffee served in a cup" loading="lazy"></div>
+          <div class="product-info"><div><h3>Americano</h3><p>Espresso softened with hot water.</p></div><strong>$2.50</strong></div>
+        </article>
+        <article class="product-card" data-category="coffee">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1676300183660-212d2d5ad0ed?auto=format&fit=crop&w=900&q=85" alt="Cappuccino with creamy milk foam" loading="lazy"><span class="product-tag">FAVOURITE</span></div>
+          <div class="product-info"><div><h3>Cappuccino</h3><p>Espresso, steamed milk and soft foam.</p></div><strong>$3.00</strong></div>
+        </article>
+        <article class="product-card" data-category="coffee">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1582152747136-af63c112fce5?auto=format&fit=crop&w=900&q=85" alt="Latte with leaf-shaped milk foam art in a ceramic cup" loading="lazy"></div>
+          <div class="product-info"><div><h3>Latte</h3><p>Smooth espresso with silky steamed milk.</p></div><strong>$3.50</strong></div>
+        </article>
+        <article class="product-card" data-category="coffee">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1606168347355-65624f8342e8?auto=format&fit=crop&w=900&q=85" alt="Flat white coffee with leaf-shaped latte art" loading="lazy"></div>
+          <div class="product-info"><div><h3>Flat White</h3><p>Double espresso with velvety microfoam.</p></div><strong>$3.50</strong></div>
+        </article>
+        <article class="product-card" data-category="coffee">
+          <div class="product-image"><img src="https://www.tasteatlas.com/images/ingredients/6bf6e4101989400ab465333641bb94b7.jpg" alt="Raf coffee with thick creamy foam in a glass mug" loading="lazy"></div>
+          <div class="product-info"><div><h3>Raf Coffee</h3><p>Espresso whipped with cream and vanilla.</p></div><strong>$4.00</strong></div>
+        </article>
+        <article class="product-card" data-category="desserts">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1754652327649-b7f96de797bd?auto=format&fit=crop&w=900&q=85" alt="Golden flaky butter croissant" loading="lazy"></div>
+          <div class="product-info"><div><h3>Butter Croissant</h3><p>Golden, flaky and baked until perfect.</p></div><strong>$2.50</strong></div>
+        </article>
+        <article class="product-card" data-category="desserts">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=900&q=85" alt="Slice of cheesecake on a dark plate" loading="lazy"></div>
+          <div class="product-info"><div><h3>Cheesecake</h3><p>Creamy classic with a buttery base.</p></div><strong>$4.00</strong></div>
+        </article>
+        <article class="product-card" data-category="desserts">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1612078960206-1709f1f0c969?auto=format&fit=crop&w=900&q=85" alt="Rich chocolate brownie on a plate" loading="lazy"></div>
+          <div class="product-info"><div><h3>Chocolate Brownie</h3><p>Deep chocolate flavour, soft centre.</p></div><strong>$3.00</strong></div>
+        </article>
+        <article class="product-card" data-category="desserts">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1724116379273-ba32b70d112c?auto=format&fit=crop&w=900&q=85" alt="Classic tiramisu with mascarpone layers and cocoa" loading="lazy"></div>
+          <div class="product-info"><div><h3>Tiramisu</h3><p>Espresso-soaked layers and mascarpone.</p></div><strong>$4.50</strong></div>
+        </article>
+        <article class="product-card" data-category="drinks">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=85" alt="Black tea in a cup" loading="lazy"></div>
+          <div class="product-info"><div><h3>Black Tea</h3><p>Full-bodied and comforting.</p></div><strong>$2.00</strong></div>
+        </article>
+        <article class="product-card" data-category="drinks">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1692731753243-793e272adae9?auto=format&fit=crop&w=900&q=85" alt="Green tea in a ceramic cup" loading="lazy"></div>
+          <div class="product-info"><div><h3>Green Tea</h3><p>Light, delicate and refreshing.</p></div><strong>$2.00</strong></div>
+        </article>
+      </div>
+      <p class="menu-footnote">A little note: our menu is made with care. Prices are shown in USD for this demonstration.</p>
+    </section>
+
+    <section id="about" class="page-section about-section is-hidden" aria-labelledby="about-title">
+      <div class="about-hero">
+        <div class="about-hero-copy">
+          <p class="eyebrow"><span></span> THE STORY BEHIND THE CUP</p>
+          <h1 id="about-title">A little less rush.<br><em>A little more life.</em></h1>
+          <p>NOIR COFFEE was created around a simple idea: good coffee deserves time, and people deserve a place to take it.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85" alt="Warm and welcoming coffee shop interior">
+      </div>
+
+      <div class="story-layout">
+        <div><p class="eyebrow">OUR PHILOSOPHY</p><h2>Not just another<br><em>coffee stop.</em></h2></div>
+        <div class="story-text"><p>We believe the best moments are often the simplest: the first sip in the morning, a familiar face behind the counter, a conversation that lasts a little longer than planned.</p><p>That's why we focus on thoughtful coffee, honest ingredients and an atmosphere that makes you feel at home. Come as you are. Stay as long as you like.</p></div>
+      </div>
+
+      <div class="about-values">
+        <article><span>01 / ORIGIN</span><h3>Good beans<br>matter.</h3><p>We choose coffee for its quality, character and the people behind it.</p></article>
+        <article><span>02 / CRAFT</span><h3>Made with<br>intention.</h3><p>From the grind to the final pour, every detail has its place.</p></article>
+        <article><span>03 / COMMUNITY</span><h3>Room for<br>everyone.</h3><p>A welcoming corner for regulars, first-timers and everything between.</p></article>
+      </div>
+
+      <div class="interior-gallery">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=85" alt="Coffee shop seating area" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=900&q=85" alt="Coffee bar and interior details" loading="lazy">
+      </div>
+
+      <div class="reviews-section">
+        <div class="reviews-heading"><div><p class="eyebrow">KIND WORDS</p><h2>From our <em>guests.</em></h2></div><p><strong id="review-count">3</strong> notes from the coffee table</p></div>
+        <div class="reviews-layout">
+          <div class="review-list" id="review-list" aria-live="polite">
+            <article class="review-card"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><p>“A lovely place to slow down. The cappuccino is always perfect, and the atmosphere feels like a warm hug.”</p><span>ANNA M.</span></article>
+            <article class="review-card"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><p>“Beautiful coffee, kind people and the best croissant in the neighbourhood. Definitely coming back.”</p><span>MAX K.</span></article>
+            <article class="review-card"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><p>“My favourite little corner for reading, working or simply enjoying a good cup of coffee.”</p><span>SOFIA R.</span></article>
+          </div>
+          <form class="review-form" id="review-form" novalidate>
+            <p class="eyebrow">LEAVE A NOTE</p>
+            <h3>Your words<br><em>matter to us.</em></h3>
+            <label for="review-name">Your name</label>
+            <input id="review-name" name="name" type="text" maxlength="32" placeholder="e.g. Alex" required>
+            <div class="field-heading"><label for="review-message">Your review</label><span id="char-count">0 / 240</span></div>
+            <textarea id="review-message" name="message" rows="4" maxlength="240" placeholder="Tell us about your visit..." required></textarea>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <button class="button button-primary form-submit" type="submit">Share your note <span aria-hidden="true">↗</span></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="contact-band">
+        <div><p class="eyebrow">COME SAY HELLO</p><h2>Your table<br><em>is waiting.</em></h2></div>
+        <div class="contact-details">
+          <div><span>FIND US</span><p>12 Coffee Street, Ivano-Frankivsk</p></div>
+          <div><span>OPENING HOURS</span><p>Mon — Sun · 08:00 — 21:00</p></div>
+          <div><span>GET IN TOUCH</span><p>hello@noircoffee.example<br>+380 00 000 00 00</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home">NOIR <span>COFFEE</span></a>
+    <p>GOOD COFFEE. SLOW MOMENTS.</p>
+    <span>© <span id="current-year"></span> NOIR COFFEE</span>
+  </footer>
+</body>
+</html>
